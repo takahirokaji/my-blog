@@ -39,3 +39,13 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+
+      - name: Actions Status Discord
+        uses: sarisia/actions-status-discord@v1.13.0
+        if: always()
+        env:
+          DISCORD_WEBHOOK: https://discord.com/api/webhooks/1160445061843144776/s7pbxOTbERUaNnmedjycWOJmG4cqPmfVehpIotccXES4R7Psnu_5_r6ptrRyOToBqQh4
+        with:
+          nodetail: true
+          title: ${{ steps.deployment.outputs.page_url }}
+          color: 0xff91a4
