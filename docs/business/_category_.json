@@ -1,0 +1,8 @@
+{
+  "label": "ビジネス書",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "これまで読んできたビジネス書"
+  }
+}
